@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IMW Industries</title>
+    <style>
+        model-viewer {
+            width: 100%; /* Full width */
+            height: 500px; /* Adjust height as needed */
+        }
+    </style>
 </head>
 <body>
     <h1>IMW Industries</h1>
     <p>CleanCNGBooster</p>
+    <model-viewer src="CleanCNGBooster.glb"
+                  alt="A 3D model of Clean CNG Booster"
+                  ar
+                  ar-modes="webxr scene-viewer quick-look"
+                  environment-image="neutral"
+                  auto-rotate
+                  camera-controls>
+    </model-viewer>
+    <script type="module" src="https://unpkg.com/@google/model-viewer@latest/dist/model-viewer.min.js"></script>
 </body>
 </html>
