@@ -8,10 +8,14 @@
         body {
             background-color: white;
             font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh; /* Use 100% of the viewport height */
+            display: flex;
+            flex-direction: column;
         }
         .header-links {
             text-align: center;
-            margin: 20px 0;
+            padding: 20px 0;
         }
         .header-links a {
             margin: 0 10px;
@@ -22,21 +26,19 @@
             text-decoration: underline;
         }
         .model-container {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
-        .model-view {
-            width: 900px; /* Adjust the size as needed */
-            height: 900px; /* Adjust the size as needed */
-            border: 5px solid black;
+            flex-grow: 1;
             display: flex;
             justify-content: center;
             align-items: center;
         }
+        model-viewer {
+            width: 80vw; /* 80% of the viewport width */
+            height: 70vh; /* 70% of the viewport height */
+            border: 5px solid black;
+        }
         .footer {
             text-align: center;
-            margin-top: 20px;
+            padding: 20px 0;
         }
         .footer p {
             margin: 5px;
@@ -57,18 +59,17 @@
 
     <main>
         <div class="model-container">
-<model-viewer 
-    src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/CleanCNGBooster.glb" 
-    alt="3D Model of Clean CNG Booster" 
-    auto-rotate 
-    camera-controls 
-    environment-image="neutral" 
-    shadow-intensity="1" 
-    ar
-    camera-orbit="0deg 90deg auto"
-    camera-target="0m 0m 0m">
-</model-viewer>
-
+            <model-viewer 
+                src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/CleanCNGBooster.glb" 
+                alt="3D Model of Clean CNG Booster" 
+                auto-rotate 
+                camera-controls 
+                environment-image="neutral" 
+                shadow-intensity="1" 
+                ar
+                camera-orbit="0deg 90deg auto"
+                camera-target="0m 0m 0m">
+            </model-viewer>
         </div>
     </main>
 
