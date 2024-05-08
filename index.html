@@ -9,7 +9,7 @@
             background-color: white;
             font-family: Arial, sans-serif;
             margin: 0;
-            height: 100vh; /* Use 100% of the viewport height */
+            height: 100vh;
             display: flex;
             flex-direction: column;
         }
@@ -25,16 +25,30 @@
         .header-links a:hover {
             text-decoration: underline;
         }
-        .model-container {
+        .model-viewer-container {
             flex-grow: 1;
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
         model-viewer {
-            width: 80vw; /* 80% of the viewport width */
-            height: 70vh; /* 70% of the viewport height */
+            width: 80vw;
+            height: 70vh;
             border: 5px solid black;
+        }
+        .annotation {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            padding: 10px;
+            border-radius: 4px;
+            max-width: 300px;
+            font-size: 14px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            z-index: 100;
         }
         .footer {
             text-align: center;
@@ -43,25 +57,6 @@
         .footer p {
             margin: 5px;
         }
-     .model-viewer-container {
-    position: relative;
-    width: 80vw;
-    height: 70vh;
-}
-
-.annotation {
-    position: absolute;
-    top: 10px;  /* Adjust spacing from the top */
-    left: 10px; /* Adjust spacing from the left */
-    background-color: rgba(255, 255, 255, 0.8);
-    color: black;
-    padding: 10px;
-    border-radius: 4px;
-    max-width: 300px; /* Adjust based on your design needs */
-    font-size: 14px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    z-index: 100;
-}
     </style>
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
 </head>
@@ -77,23 +72,25 @@
     </header>
 
     <main>
-      <div class="model-viewer-container">
-    <model-viewer 
-        src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/CleanCNGBooster.glb" 
-        alt="3D Model of Clean CNG Booster" 
-        auto-rotate 
-        camera-controls 
-        environment-image="neutral" 
-        shadow-intensity="1" 
-        ar
-        camera-orbit="0deg 90deg auto"
-        camera-target="0m 0m 0m">
-    </model-viewer>
-   <div class="annotation">
-       <br>CLEANCNGBOOSTER</br>
-       From site footprint usage, product specification, installation, scalability, and portability to reducing maintenance intervals, and downtime; the CleanCNG is a cutting-edge solution that delivers reliable performance, peace of mind, and affordability for station owners.
-    </div>
-</div>
+        <div class="model-viewer-container">
+            <model-viewer 
+                src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/CleanCNGBooster.glb" 
+                alt="3D Model of Clean CNG Booster" 
+                auto-rotate 
+                camera-controls
+                environment-image="neutral" 
+                shadow-intensity="1" 
+                ar
+                interaction-policy="allow-when-focused"
+                camera-orbit="auto auto auto"
+                min-camera-orbit="auto auto 100%"
+                max-camera-orbit="auto auto auto">
+                <div class="annotation">
+                    <br> Clean CNG Booster </br>
+                    From site footprint usage, product specification, installation, scalability, and portability to reducing maintenance intervals, and downtime; the CleanCNG is a cutting-edge solution that delivers reliable performance, peace of mind, and affordability for station owners.
+                </div>
+            </model-viewer>
+        </div>
     </main>
 
     <footer class="footer">
