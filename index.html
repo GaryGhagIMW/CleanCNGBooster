@@ -43,6 +43,17 @@
         .footer p {
             margin: 5px;
         }
+        model-viewer::part(hotspot) {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%); /* Center the hotspot */
+    font-size: 14px;
+}
     </style>
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
 </head>
@@ -59,17 +70,21 @@
 
     <main>
         <div class="model-container">
-            <model-viewer 
-                src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/CleanCNGBooster.glb" 
-                alt="3D Model of Clean CNG Booster" 
-                auto-rotate 
-                camera-controls 
-                environment-image="neutral" 
-                shadow-intensity="1" 
-                ar
-                camera-orbit="0deg 90deg auto"
-                camera-target="0m 0m 0m">
-            </model-viewer>
+           <model-viewer 
+    src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/CleanCNGBooster.glb" 
+    alt="3D Model of Clean CNG Booster" 
+    auto-rotate 
+    camera-controls 
+    environment-image="neutral" 
+    shadow-intensity="1" 
+    ar
+    camera-orbit="0deg 90deg auto"
+    camera-target="0m 0m 0m">
+    <div slot="hotspot" data-position="0m 0.5m 0m" data-normal="0m 1m 0m" id="annotation1">
+        IMW Clean CNG Booster
+    </div>
+</model-viewer>
+
         </div>
     </main>
 
