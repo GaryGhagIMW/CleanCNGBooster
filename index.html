@@ -43,16 +43,24 @@
         .footer p {
             margin: 5px;
         }
-        model-viewer::part(hotspot) {
+     .model-viewer-container {
+    position: relative;
+    width: 80vw;
+    height: 70vh;
+}
+
+.annotation {
+    position: absolute;
+    top: 10px;  /* Adjust spacing from the top */
+    left: 10px; /* Adjust spacing from the left */
     background-color: rgba(255, 255, 255, 0.8);
     color: black;
-    padding: 5px;
+    padding: 10px;
     border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translate(-50%, -50%); /* Center the hotspot */
+    max-width: 300px; /* Adjust based on your design needs */
     font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 100;
 }
     </style>
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
@@ -69,23 +77,22 @@
     </header>
 
     <main>
-        <div class="model-container">
-           <model-viewer 
-    src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/CleanCNGBooster.glb" 
-    alt="3D Model of Clean CNG Booster" 
-    auto-rotate 
-    camera-controls 
-    environment-image="neutral" 
-    shadow-intensity="1" 
-    ar
-    camera-orbit="0deg 90deg auto"
-    camera-target="0m 0m 0m">
-    <div slot="hotspot" data-position="0m 0.5m 0m" data-normal="0m 1m 0m" id="annotation1">
-        IMW Clean CNG Booster
+      <div class="model-viewer-container">
+    <model-viewer 
+        src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/CleanCNGBooster.glb" 
+        alt="3D Model of Clean CNG Booster" 
+        auto-rotate 
+        camera-controls 
+        environment-image="neutral" 
+        shadow-intensity="1" 
+        ar
+        camera-orbit="0deg 90deg auto"
+        camera-target="0m 0m 0m">
+    </model-viewer>
+    <div class="annotation">
+        From site footprint usage, product specification, installation, scalability, and portability to reducing maintenance intervals, and downtime; the CleanCNG is a cutting-edge solution that delivers reliable performance, peace of mind, and affordability for station owners.
     </div>
-</model-viewer>
-
-        </div>
+</div>
     </main>
 
     <footer class="footer">
