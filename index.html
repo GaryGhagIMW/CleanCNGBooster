@@ -49,14 +49,14 @@
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: #4CAF50;
+            background-color: #368534;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 10px;
             font-weight: bold;
         }
         .hero-banner .button:hover {
-            background-color: #45a049;
+            background-color: #2e6f2a;
         }
         .divider {
             width: 100%;
@@ -78,14 +78,18 @@
             margin-top: 0;
         }
         main {
-            width: 80%;
+            width: 100%;
             margin: 20px 0;
             background-color: white;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             padding: 20px;
             flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .model-viewer-container {
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -109,9 +113,23 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             z-index: 100;
         }
+        .contact-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #368534;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .contact-button:hover {
+            background-color: #2e6f2a;
+        }
         footer {
             width: 100%;
-            background-color: #333;
+            background-color: #1E3563;
             color: white;
             text-align: center;
             padding: 20px 0;
@@ -123,6 +141,21 @@
         }
         .footer a:hover {
             text-decoration: underline;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .footer-content div {
+            margin: 10px;
+            text-align: left;
+        }
+        .footer-content img {
+            display: block;
+            margin: 0 auto 10px;
         }
     </style>
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
@@ -180,12 +213,27 @@
                 </div>
             </model-viewer>
         </div>
+        <a href="mailto:aftermarket@imw.ca" class="contact-button">Contact Us</a>
     </main>
 
     <footer>
-        <p>CONTACT US</p>
-        <p>EMAIL: <a href="mailto:aftermarket@imw.ca">aftermarket@imw.ca</a></p>
-        <p>PHONE: 604-795-9491</p>
+        <div class="footer-content">
+            <div>
+                <img src="logo.png" alt="IMW Logo" />
+                <p>Unit #110 - 45668 South Sumas Road<br>Chilliwack, BC V2R 3N3, Canada</p>
+                <p><a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a></p>
+            </div>
+            <div>
+                <p><b>EMAIL US DIRECTLY</b><br><a href="mailto:aftermarket@imw.ca">aftermarket@imw.ca</a></p>
+                <p><b>CALL US DIRECTLY</b><br>+1 (604) 795-9491</p>
+            </div>
+            <div>
+                <a href="https://imw.ca/wp-content/uploads/2024/01/ISO-9001-2015-Certificate-of-Registration-for-IMW-Industries-Ltd.-Expires-2024-07-23.pdf">ISO 9001 Certificate</a> |
+                <a href="https://imw.ca/wp-content/uploads/2024/01/ISO-14001-2015-Certificate-of-Registration-for-IMW-Industries-Ltd.-Expires-2024-07-23.pdf">ISO 14001 Certificate</a> |
+                <a href="https://imw.ca/wp-content/uploads/2024/01/IMW-PO-Terms-and-Conditions-Rev-06.03.2015.pdf">Purchasing Terms & Conditions</a> |
+                <a href="https://imw.ca/wp-content/uploads/2024/01/SPC-000003.pdf">IMW Standard Warranty</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
