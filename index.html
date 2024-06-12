@@ -158,7 +158,8 @@
             text-align: center;
             padding: 20px 0;
             margin-top: auto;
-            position: relative;
+            display: flex;
+            justify-content: space-between;
         }
         .footer a {
             color: #f5f5f5;
@@ -180,16 +181,13 @@
             position: relative;
         }
         .footer-content img {
-            position: absolute;
-            top: 10px;
-            left: 10px;
             width: 50px;
             height: 50px;
         }
+        .footer-logo-container {
+            flex-shrink: 0;
+        }
         .footer-logo {
-            position: absolute;
-            top: 10px;
-            left: 10px;
             width: 250px;
             height: 250px;
         }
@@ -258,24 +256,23 @@
     </main>
 
     <footer>
-        <img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/05. IMW Logo - White.png" alt="Footer Logo" class="footer-logo">
+        <div class="footer-logo-container">
+            <img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/05. IMW Logo - White.png" alt="Footer Logo" class="footer-logo">
+        </div>
         <div class="footer-content">
             <div>
-                <img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/icons8-pdf-50.png" alt="Footer 1 Image">
                 <p>Unit #110 - 45668 South Sumas Road<br>Chilliwack, BC V2R 3N3, Canada</p>
                 <p><a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a></p>
             </div>
             <div>
-                <img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/icons8-pdf-50.png" alt="Footer 2 Image">
                 <p><b>EMAIL US DIRECTLY</b><br><a href="mailto:aftermarket@imw.ca">aftermarket@imw.ca</a></p>
                 <p><b>CALL US DIRECTLY</b><br>+1 (604) 795-9491</p>
             </div>
             <div>
-                <img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/icons8-pdf-50.png" alt="Footer 3 Image">
-                <a href="https://imw.ca/wp-content/uploads/2024/01/ISO-9001-2015-Certificate-of-Registration-for-IMW-Industries-Ltd.-Expires-2024-07-23.pdf">ISO 9001 Certificate</a> |
-                <a href="https://imw.ca/wp-content/uploads/2024/01/ISO-14001-2015-Certificate-of-Registration-for-IMW-Industries-Ltd.-Expires-2024-07-23.pdf">ISO 14001 Certificate</a> |
-                <a href="https://imw.ca/wp-content/uploads/2024/01/IMW-PO-Terms-and-Conditions-Rev-06.03.2015.pdf">Purchasing Terms & Conditions</a> |
-                <a href="https://imw.ca/wp-content/uploads/2024/01/SPC-000003.pdf">IMW Standard Warranty</a>
+                <a href="https://imw.ca/wp-content/uploads/2024/01/ISO-9001-2015-Certificate-of-Registration-for-IMW-Industries-Ltd.-Expires-2024-07-23.pdf"><img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/icons8-pdf-50.png" alt="Footer 3 Image">ISO 9001 Certificate</a> |
+                <a href="https://imw.ca/wp-content/uploads/2024/01/ISO-14001-2015-Certificate-of-Registration-for-IMW-Industries-Ltd.-Expires-2024-07-23.pdf"><img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/icons8-pdf-50.png" alt="Footer 3 Image">ISO 14001 Certificate</a> |
+                <a href="https://imw.ca/wp-content/uploads/2024/01/IMW-PO-Terms-and-Conditions-Rev-06.03.2015.pdf"><img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/icons8-pdf-50.png" alt="Footer 3 Image">Purchasing Terms & Conditions</a> |
+                <a href="https://imw.ca/wp-content/uploads/2024/01/SPC-000003.pdf"><img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/icons8-pdf-50.png" alt="Footer 3 Image">IMW Standard Warranty</a>
             </div>
         </div>
     </footer>
