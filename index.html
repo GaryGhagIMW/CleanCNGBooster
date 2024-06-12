@@ -19,6 +19,9 @@
             color: black;
             padding: 10px 0;
             border-bottom: 3px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .header-links {
             display: flex;
@@ -41,6 +44,14 @@
             text-align: center;
             padding: 50px 0;
             margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .hero-banner-content {
+            max-width: 600px;
+            text-align: left;
         }
         .hero-banner h1, .hero-banner p {
             margin: 0;
@@ -58,6 +69,11 @@
         .hero-banner .button:hover {
             background-color: #2e6f2a;
         }
+        .hero-banner img {
+            max-width: 100%;
+            height: auto;
+            margin-left: 20px;
+        }
         .divider {
             width: 100%;
             background-color: white;
@@ -73,6 +89,14 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             background-color: #fff;
             border-radius: 5px;
+            position: relative;
+        }
+        .container img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
         }
         .container h2 {
             margin-top: 0;
@@ -134,6 +158,7 @@
             text-align: center;
             padding: 20px 0;
             margin-top: auto;
+            position: relative;
         }
         .footer a {
             color: #f5f5f5;
@@ -152,42 +177,58 @@
         .footer-content div {
             margin: 10px;
             text-align: left;
+            position: relative;
         }
         .footer-content img {
-            display: block;
-            margin: 0 auto 10px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+        }
+        .footer-logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 250px;
+            height: 250px;
         }
     </style>
     <script type="module" src="https://unpkg.com/@google/model-viewer"></script>
 </head>
 <body>
     <header>
+        <img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/01. IMW Logo - Blue.png" alt="Left Navbar Image" style="width:250px; height:250px;">
         <div class="header-links">
             <a href="#">Home</a>
             <a href="#">Benefits</a>
             <a href="#">Contact Us</a>
         </div>
+        <img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/02. LinkedIn Logo.png" alt="Right Navbar Image" style="width:50px; height:50px;">
     </header>
 
     <div class="hero-banner">
-        <h1>BoosterRNG</h1>
-        <p>if CNG is good, RNG is better</p>
-        <a href="https://imw.ca/wp-content/uploads/2024/01/ISO-9001-2015-Certificate-of-Registration-for-IMW-Industries-Ltd.-Expires-2024-07-23.pdf" class="button">Download Technical Features</a>
+        <div class="hero-banner-content">
+            <h1>BoosterRNG</h1>
+            <p>if CNG is good, RNG is better</p>
+            <a href="https://imw.ca/wp-content/uploads/2024/01/ISO-9001-2015-Certificate-of-Registration-for-IMW-Industries-Ltd.-Expires-2024-07-23.pdf" class="button">Download Technical Features</a>
+        </div>
+        <img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/03. BoosterRNG (Option 2).png" alt="Hero Banner Image">
     </div>
 
     <div class="divider">
         <div class="container">
-            <img src="icon1.png" alt="Icon 1" />
+            <img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/04. Benefits-1.png" alt="Divider 1 Image">
             <h2>Lorem Ipsum</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
         </div>
         <div class="container">
-            <img src="icon2.png" alt="Icon 2" />
+            <img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/04. Benefits-2.png" alt="Divider 2 Image">
             <h2>Lorem Ipsum</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
         </div>
         <div class="container">
-            <img src="icon3.png" alt="Icon 3" />
+            <img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/04. Benefits-3.png" alt="Divider 3 Image">
             <h2>Lorem Ipsum</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
         </div>
@@ -217,17 +258,20 @@
     </main>
 
     <footer>
+        <img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/05. IMW Logo - White.png" alt="Footer Logo" class="footer-logo">
         <div class="footer-content">
             <div>
-                <img src="logo.png" alt="IMW Logo" />
+                <img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/icons8-pdf-50.png" alt="Footer 1 Image">
                 <p>Unit #110 - 45668 South Sumas Road<br>Chilliwack, BC V2R 3N3, Canada</p>
                 <p><a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a></p>
             </div>
             <div>
+                <img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/icons8-pdf-50.png" alt="Footer 2 Image">
                 <p><b>EMAIL US DIRECTLY</b><br><a href="mailto:aftermarket@imw.ca">aftermarket@imw.ca</a></p>
                 <p><b>CALL US DIRECTLY</b><br>+1 (604) 795-9491</p>
             </div>
             <div>
+                <img src="https://raw.githubusercontent.com/GaryGhagIMW/CleanCNGBooster/master/icons8-pdf-50.png" alt="Footer 3 Image">
                 <a href="https://imw.ca/wp-content/uploads/2024/01/ISO-9001-2015-Certificate-of-Registration-for-IMW-Industries-Ltd.-Expires-2024-07-23.pdf">ISO 9001 Certificate</a> |
                 <a href="https://imw.ca/wp-content/uploads/2024/01/ISO-14001-2015-Certificate-of-Registration-for-IMW-Industries-Ltd.-Expires-2024-07-23.pdf">ISO 14001 Certificate</a> |
                 <a href="https://imw.ca/wp-content/uploads/2024/01/IMW-PO-Terms-and-Conditions-Rev-06.03.2015.pdf">Purchasing Terms & Conditions</a> |
